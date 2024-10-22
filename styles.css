@@ -1,0 +1,51 @@
+/* Estilo global */
+body {
+    font-family: Arial, sans-serif; /* Fuente general */
+    background-color: #f8f9fa; /* Color de fondo claro */
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 800px; /* Ancho máximo del contenedor */
+    margin: auto; /* Centra el contenedor en la página */
+    padding: 20px; /* Espaciado interior */
+}
+
+/* Estilo de la tarjeta */
+.recuadro {
+    background-color: #fff; /* Fondo blanco para la tarjeta */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px; /* Espaciado interno */
+}
+
+/* Encabezados */
+h1 {
+    color: #333; /* Color del texto del encabezado */
+    text-align: center; /* Centra el texto */
+}
+
+/* Botones */
+button {
+    background-color: #28a745; /* Color de fondo verde */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s; /* Efecto de transición */
+}
+
+button:hover {
+    background-color: #218838; /* Color de fondo verde más oscuro al pasar el mouse */
+}
+
+/* Estilo para etiquetas */
+label {
+    display: block; /* Cada etiqueta en una nueva línea */
+    margin-bottom: 5px; /* Espacio inferior */
+    color: #495057; /* Color de las etiquetas */
+}
