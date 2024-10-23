@@ -8,18 +8,22 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
+    <!-- JS -->
     <script src="codigo.js"></script>
+    <!-- SweetAlert -->
+    <script src="alert.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Figures</title>
 </head>
 <body class="bg-light">
     <div class="container mt-5">
         <div class="card shadow p-4">
             <h1 class="text-center mb-4">Selección de figura</h1>
-            <form action="recepcion.php" method="POST">
+            <form action="recepcion.php" method="POST" id="frm">
                 <div class="form-group">
                     <label for="figura">Elige una figura:</label>
                     <select name="figura" id="figura" class="form-control" required>
-                        <option value="">Elige una figura</option>
+                        <option value="" selected disabled>Elige una figura</option>
                         <option value="cuadrado">Cuadrado</option>
                         <option value="triangulo">Triángulo</option>
                         <option value="rectangulo">Rectángulo</option>
@@ -27,7 +31,7 @@
                     </select>
                 </div>
                 <div class="text-center">
-                    <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+                    <button type="submit" class="btn btn-primary btn-lg" id="enviar" onclick="">Enviar</button>
                 </div>
             </form>
         </div>

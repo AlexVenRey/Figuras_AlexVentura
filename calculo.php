@@ -4,10 +4,10 @@ session_start();
 
 // Verificamos que se han enviado datos
 if (isset($_POST['figura'])) {
-    $_SESSION['figura'] = $_POST['figura'];
+    // $_SESSION['figura'] = $_POST['figura'];
     $figura = $_SESSION['figura'];
 } else {
-    $figura = null;
+    header('Location: index.php');
 }
 ?>
 
@@ -66,8 +66,6 @@ if (isset($_POST['figura'])) {
                 echo "El perímetro del círculo es: $perimetroCirculo <br>";
                 echo "El área del círculo es: $areaCirculo";
 
-            } else {
-                echo "No has rellenado los campos correctamente.";
             }
             ?>
         </div>
