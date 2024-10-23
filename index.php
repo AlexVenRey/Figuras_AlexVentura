@@ -8,6 +8,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
+    <script src="codigo.js"></script>
     <title>Figures</title>
 </head>
 <body class="bg-light">
