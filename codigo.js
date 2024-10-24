@@ -4,13 +4,14 @@ function validar() {
     if (tipoFigura === 'cuadrado') {
         let lado = document.getElementById('lado').value;
         let errorlado = document.getElementById('errorlado');
-        console.log(lado);
+
         if (lado === "" || lado < 1) {
-            errorlado.innerHTML = 'El campo no puede estar vacio o tener un valor menor que 1';
+            errorlado.innerHTML = 'El campo no puede estar vacío o tener un valor menor que 1';
+            errorlado.style.color = 'red';  // Establecer el color del mensaje en rojo
             return false;
-            exit();
         } else {
             errorlado.innerHTML = '';
+            errorlado.style.color = '';  // Limpiar el estilo en caso de que no haya error
         }
     }
 
@@ -21,19 +22,21 @@ function validar() {
         let errorlado2 = document.getElementById('errorlado2');
 
         if (lado1 === "" || lado1 < 1) {
-            errorlado1.innerHTML = 'El campo no puede estar vacio o tener un valor menor que 1';
+            errorlado1.innerHTML = 'El campo no puede estar vacío o tener un valor menor que 1';
+            errorlado1.style.color = 'red';  // Color rojo para el error del lado 1
             return false;
-            exit();
         } else {
             errorlado1.innerHTML = '';
+            errorlado1.style.color = '';  // Limpiar el estilo si el valor es correcto
         }
 
         if (lado2 === "" || lado2 < 1) {
-            errorlado2.innerHTML = 'El campo no puede estar vacio o tener un valor menor que 1';
+            errorlado2.innerHTML = 'El campo no puede estar vacío o tener un valor menor que 1';
+            errorlado2.style.color = 'red';  // Color rojo para el error del lado 2
             return false;
-            exit();
         } else {
             errorlado2.innerHTML = '';
+            errorlado2.style.color = '';  // Limpiar el estilo si el valor es correcto
         }
     }
 
@@ -47,26 +50,32 @@ function validar() {
 
         if (lado1 === "" || lado1 < 1) {
             errorlado1.innerHTML = 'El campo no puede estar vacio o tener un valor menor que 1';
+            errorlado1.style.color = 'red';
             return false;
             exit();
         } else {
             errorlado1.innerHTML = '';
+            errorlado1.style.color = '';
         }
 
         if (lado2 === "" || lado2 < 1) {
             errorlado2.innerHTML = 'El campo no puede estar vacio o tener un valor menor que 1';
+            errorlado2.style.color = 'red';
             return false;
             exit();
         } else {
             errorlado2.innerHTML = '';
+            errorlado2.style.color = '';
         }
 
         if (lado3 === "" || lado3 < 1) {
             errorlado3.innerHTML = 'El campo no puede estar vacio o tener un valor menor que 1';
+            errorlado3.style.color = 'red';
             return false;
             exit();
         } else {
             errorlado3.innerHTML = '';
+            errorlado3.style.color = '';
         }
 
     }
@@ -77,10 +86,12 @@ function validar() {
         console.log(radio);
         if (radio === "" || radio < 1) {
             errorradio.innerHTML = 'El campo no puede estar vacio o tener un valor menor que 1';
+            errorradio.style.color = 'red';
             return false;
             exit();
         } else {
             errorradio.innerHTML = '';
+            errorradio.style.color = '';
         }
     }
 
