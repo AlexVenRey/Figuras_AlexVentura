@@ -65,9 +65,31 @@ if (isset($_POST['figura'])) {
 
                 echo "El perímetro del círculo es: $perimetroCirculo <br>";
                 echo "El área del círculo es: $areaCirculo";
-
             }
             ?>
+
+            <div class="text-center mt-4">
+                <form action="recepcion.php" method="POST">
+                    <input type="hidden" name="figura" value="<?php echo $figura; ?>">
+                    <?php
+                    // Rellenar los valores de los lados o el radio para editar
+                    if ($figura === 'cuadrado') {
+                        echo '<input type="hidden" name="lado1" value="' . $_POST['lado'] . '">';
+                    } elseif ($figura === 'triangulo') {
+                        echo '<input type="hidden" name="lado1" value="' . $_POST['lado1'] . '">';
+                        echo '<input type="hidden" name="lado2" value="' . $_POST['lado2'] . '">';
+                        echo '<input type="hidden" name="lado3" value="' . $_POST['lado3'] . '">';
+                    } elseif ($figura === 'rectangulo') {
+                        echo '<input type="hidden" name="lado1" value="' . $_POST['lado1'] . '">';
+                        echo '<input type="hidden" name="lado2" value="' . $_POST['lado2'] . '">';
+                    } elseif ($figura === 'circulo') {
+                        echo '<input type="hidden" name="radio" value="' . $_POST['radio'] . '">';
+                    }
+                    ?>
+                    <button type="submit" class="btn btn-warning btn-lg mt-2">Editar Valores</button>
+                </form>
+            </div>
+
         </div>
     </div>
 </body>
