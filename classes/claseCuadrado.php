@@ -29,4 +29,4 @@ class Cuadrado extends FiguraGeometrica {
         return "Figura: " . $this->tipoFigura . ", Lado: " . $this->lado1;
     }
 }
-?>
+?> 
