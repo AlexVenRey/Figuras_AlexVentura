@@ -29,12 +29,12 @@ class Rectangulo extends FiguraGeometrica {
 
     // Calcular l'àrea
     public function calcularArea() {
-        return $this->lado1 * $this->lado2; // Àrea = llargada * amplada
+        return $this->lado1 * $this->lado2;
     }
 
     // Calcular el perímetre
     public function calcularPerimetre() {
-        return 2 * ($this->lado1 + $this->lado2); // Perímetre = 2 * (llargada + amplada)
+        return 2 * ($this->lado1 + $this->lado2);
     }
 
     // Mètode __toString per retornar la descripció de la figura

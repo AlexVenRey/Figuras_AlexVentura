@@ -7,11 +7,11 @@ function validar() {
 
         if (lado === "" || lado < 1) {
             errorlado.innerHTML = 'El campo no puede estar vacío o tener un valor menor que 1';
-            errorlado.style.color = 'red';  // Establecer el color del mensaje en rojo
+            errorlado.style.color = 'red';
             return false;
         } else {
             errorlado.innerHTML = '';
-            errorlado.style.color = '';  // Limpiar el estilo en caso de que no haya error
+            errorlado.style.color = '';
         }
     }
 
@@ -23,20 +23,20 @@ function validar() {
 
         if (lado1 === "" || lado1 < 1) {
             errorlado1.innerHTML = 'El campo no puede estar vacío o tener un valor menor que 1';
-            errorlado1.style.color = 'red';  // Color rojo para el error del lado 1
+            errorlado1.style.color = 'red';
             return false;
         } else {
             errorlado1.innerHTML = '';
-            errorlado1.style.color = '';  // Limpiar el estilo si el valor es correcto
+            errorlado1.style.color = '';
         }
 
         if (lado2 === "" || lado2 < 1) {
             errorlado2.innerHTML = 'El campo no puede estar vacío o tener un valor menor que 1';
-            errorlado2.style.color = 'red';  // Color rojo para el error del lado 2
+            errorlado2.style.color = 'red';
             return false;
         } else {
             errorlado2.innerHTML = '';
-            errorlado2.style.color = '';  // Limpiar el estilo si el valor es correcto
+            errorlado2.style.color = '';
         }
     }
 
@@ -93,6 +93,46 @@ function validar() {
             errorradio.innerHTML = '';
             errorradio.style.color = '';
         }
+    }
+
+    if (tipoFigura === 'trapecio') {
+        let lado1 = document.getElementById('lado1').value;
+        let lado2 = document.getElementById('lado2').value;
+        let altura = document.getElementById('altura').value;
+        let errorlado1 = document.getElementById('errorlado1');
+        let errorlado2 = document.getElementById('errorlado2');
+        let erroraltura = document.getElementById('erroraltura');
+
+        if (lado1 === "" || lado1 < 1) {
+            errorlado1.innerHTML = 'El campo no puede estar vacio o tener un valor menor que 1';
+            errorlado1.style.color = 'red';
+            return false;
+            exit();
+        } else {
+            errorlado1.innerHTML = '';
+            errorlado1.style.color = '';
+        }
+
+        if (lado2 === "" || lado2 < 1) {
+            errorlado2.innerHTML = 'El campo no puede estar vacio o tener un valor menor que 1';
+            errorlado2.style.color = 'red';
+            return false;
+            exit();
+        } else {
+            errorlado2.innerHTML = '';
+            errorlado2.style.color = '';
+        }
+
+        if (altura === "" || altura < 1) {
+            erroraltura.innerHTML = 'El campo no puede estar vacio o tener un valor menor que 1';
+            erroraltura.style.color = 'red';
+            return false;
+            exit();
+        } else {
+            erroraltura.innerHTML = '';
+            erroraltura.style.color = '';
+        }
+
     }
 
     return true;

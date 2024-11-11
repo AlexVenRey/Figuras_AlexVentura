@@ -16,9 +16,11 @@
     <title>Figures</title>
 </head>
 <body class="bg-light">
+    <!-- Contingut del recuadre de seleccio de la figura -->
     <div class="container mt-5">
-        <div class="card shadow p-4">
+        <div class="recuadro shadow p-4">
             <h1 class="text-center mb-4">Selección de figura</h1>
+            <!-- Formulario para la seleccion de la figura -->
             <form action="recepcion.php" method="POST" id="frm">
                 <div class="form-group">
                     <label for="figura">Elige una figura:</label>
@@ -28,8 +30,10 @@
                         <option value="triangulo">Triángulo</option>
                         <option value="rectangulo">Rectángulo</option>
                         <option value="circulo">Círculo</option>
+                        <option value="trapecio">Trapecio</option>
                     </select>
                 </div>
+                <!-- Botón enviar -->
                 <div class="text-center">
                     <button type="submit" class="btn btn-primary btn-lg" id="enviar" onclick="">Enviar</button>
                 </div>

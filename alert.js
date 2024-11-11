@@ -1,4 +1,4 @@
-// Sweet Alert que pregunta al usuario si está seguro que quiere elegir esa figura
+// Sweet Alert que pregunta al usuari si està segur que vol escollir aquella figura
 document.addEventListener('DOMContentLoaded', () => {
     const btn = document.getElementById('enviar');
     

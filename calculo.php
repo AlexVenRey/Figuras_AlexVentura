@@ -1,12 +1,13 @@
 <?php
-// Iniciamos la sesión
+// Iniciem la sessió per accedir a les variables de sessió emmagatzemades previament
 session_start();
 
-// Verificamos que se han enviado datos
+// Verificamos que se han enviado datos i recuperem la variable $_SESSION['figura']
 if (isset($_POST['figura'])) {
     // $_SESSION['figura'] = $_POST['figura'];
     $figura = $_SESSION['figura'];
 } else {
+    // Redeirecciona al index.php si no s'ha seleccionat cap figura
     header('Location: index.php');
 }
 ?>
@@ -23,6 +24,7 @@ if (isset($_POST['figura'])) {
 <body class="bg-light">
     <div class="container mt-5">
         <div class="recuadro shadow p-4">
+            <!-- Mostrem resultats segons la figura que hagi seleccionat l'usuari -->
             <h1 class="text-center mb-4">Resultados</h1>
             <?php
             if ($figura === 'cuadrado') {
@@ -65,14 +67,29 @@ if (isset($_POST['figura'])) {
 
                 echo "El perímetro del círculo es: $perimetroCirculo <br>";
                 echo "El área del círculo es: $areaCirculo";
+
+            } elseif ($figura === 'trapecio') {
+                $lado1 = $_POST['lado1'];
+                $lado2 = $_POST['lado2'];
+                $altura = $_POST['altura'];
+
+                $perimetroTrapecio = ($lado1+$lado2)*$altura;
+                $areaTrapecio = (($lado1+$lado2)/2)*$altura;
+
+                echo "El perímetro del trapecio es: $perimetroTrapecio <br>";
+                echo "El área del trapecio es: $areaTrapecio";
+
+                
             }
             ?>
 
+            <!-- En aquest formulari enviem les dades dels costats de les figures, a la pàgina recepcion -->
             <div class="text-center mt-4">
                 <form action="recepcion.php" method="POST">
+                    <!-- S'envia el tipus de figura seleccionada sense mostrar-ho, per saber la figura que s'està editant -->
                     <input type="hidden" name="figura" value="<?php echo $figura; ?>">
                     <?php
-                    // Rellenar los valores de los lados o el radio para editar
+                    // Mantenim els valors dels costats o radis de la figura, enviant el valor obtingut emmagatzemat en $_POST['lado']
                     if ($figura === 'cuadrado') {
                         echo '<input type="hidden" name="lado1" value="' . $_POST['lado'] . '">';
                     } elseif ($figura === 'triangulo') {
@@ -84,8 +101,13 @@ if (isset($_POST['figura'])) {
                         echo '<input type="hidden" name="lado2" value="' . $_POST['lado2'] . '">';
                     } elseif ($figura === 'circulo') {
                         echo '<input type="hidden" name="radio" value="' . $_POST['radio'] . '">';
+                    } elseif ($figura === 'trapecio') {
+                        echo '<input type="hidden" name="lado1" value="' . $_POST['lado1'] . '">';
+                        echo '<input type="hidden" name="lado2" value="' . $_POST['lado2'] . '">';
+                        echo '<input type="hidden" name="altura" value="' . $_POST['altura'] . '">';
                     }
                     ?>
+                    <!-- Botó per tornar a modificar -->
                     <button type="submit" class="btn btn-warning btn-lg mt-2">Editar Valores</button>
                 </form>
             </div>

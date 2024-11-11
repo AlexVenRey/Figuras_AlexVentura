@@ -16,12 +16,12 @@ class Cuadrado extends FiguraGeometrica {
 
     // Calcular l'àrea
     public function calcularArea() {
-        return $this->lado1 * $this->lado1; // Àrea = costat * costat
+        return $this->lado1 * $this->lado1;
     }
 
     // Calcular el perímetre
     public function calcularPerimetre() {
-        return 4 * $this->lado1; // Perímetre = 4 * costat
+        return 4 * $this->lado1;
     }
 
     // Mètode __toString per retornar la descripció de la figura

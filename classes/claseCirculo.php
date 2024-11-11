@@ -16,12 +16,12 @@ class Circulo extends FiguraGeometrica {
 
     // Calcular l'àrea
     public function calcularArea() {
-        return pi() * pow($this->lado1, 2); // Àrea = π * radi²
+        return pi() * pow($this->lado1, 2);
     }
 
     // Calcular el perímetre
     public function calcularPerimetre() {
-        return 2 * pi() * $this->lado1; // Perímetre = 2 * π * radi
+        return 2 * pi() * $this->lado1;
     }
 
     // Mètode __toString per retornar la descripció de la figura
